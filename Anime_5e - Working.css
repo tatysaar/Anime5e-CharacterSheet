@@ -1592,7 +1592,7 @@
   grid-template-rows: 30px 30px;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "armor initiative perception speed inspiration inspiration"
+  grid-template-areas: "armor initiative perception speed fate fate"
  "armor initiative perception speed inspiration inspiration"; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-armor {
     grid-area: armor; }
@@ -1610,6 +1610,8 @@
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-training {
     grid-area: training;
     display: none; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-fate {
+    grid-area: fate; }
   .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-trackers .sheet-pc-inspiration {
     grid-area: inspiration; }
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health {

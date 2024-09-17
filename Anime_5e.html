@@ -1,9 +1,5 @@
 <div class="sheet-darkerdungeons">
-	<input class="monster_confirm_flag" type="hidden" name="attr_monster_confirm_flag">
 	<div class="licensecontainer compendium-drop-target monsters">
-		<input class="sheet-toggle-npc" name="attr_npc" type="hidden" value="0">
-		<input class="sheet-toggle-npc-spells" name="attr_npcspellcastingflag" type="checkbox" value="1" hidden>
-		<input class="sheet-toggle-npc-edit" name="attr_npc_options-flag" type="checkbox" hidden>
 		<div class="sheet-section-roll">
 			<input type="hidden" name="attr_rtype" class="sheet-roll-toggle">
 			<div class="sheet-section-roll-advantage">
@@ -54,6 +50,20 @@
 									<label>Class:</label>
 									<select name="attr_class">
 										<option value="">Choose</option>
+										<option value="Adventurer">Adventurer</option>
+										<option value="Bender">Bender</option>
+										<option value="Broker">Broker</option>
+										<option value="Dynamic Spellcaster">Dynamic Spellcaster</option>
+										<option value="Hunter">Hunter</option>
+										<option value="Isekai Student">Isekai Student</option>
+										<option value="Magical Girl/Guy">Magical Girl/Guy</option>
+										<option value="Ninja">Ninja</option>
+										<option value="Pet Monster Trainer">Pet Monster Trainer</option>
+										<option value="Psionicist">Psionicist</option>
+										<option value="Samurai">Samurai</option>
+										<option value="Shadow Warrior">Shadow Warrior</option>
+										<option value="Techknight">Techknight</option>
+										<option value="Warder">Warder</option>
 										<option value="Barbarian">Barbarian</option>
 										<option value="Bard">Bard</option>
 										<option value="Cleric">Cleric</option>
@@ -305,6 +315,22 @@
 									<div class="sheet-container-body">
 										<div class="sheet-pc-skill">
 											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_academia_prof" title="@{academia_prof}" value="(@{pb}*@{academia_type})">
+												<span></span>
+											</div>
+											<span name="attr_academia_bonus" title="@{academia_bonus}">0</span>
+											<button type="roll" name="roll_academia" value="@{wtype}&{template:simple} {{rname=@{academia_attribute} (academia)}} {{mod=@{academia_bonus}}} {{r1=[[@{d20}+@{academia_bonus}@{pbd_safe}]]}} @{rtype}+@{academia_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Academia</button>
+											<select name="attr_academia_attribute" title="@{academia_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_acrobatics_prof" title="@{acrobatics_prof}" value="(@{pb}*@{acrobatics_type})">
 												<span></span>
 											</div>
@@ -315,6 +341,38 @@
 												<option value="Dexterity" selected="selected">Dex</option>
 												<option value="Constitution">Con</option>
 												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Agriculture_prof" title="@{Agriculture_prof}" value="(@{pb}*@{Agriculture_type})">
+												<span></span>
+											</div>
+											<span name="attr_Agriculture_bonus" title="@{Agriculture_bonus}">0</span>
+											<button type="roll" name="roll_Agriculture" value="@{wtype}&{template:simple} {{rname=@{Agriculture_attribute} (Agriculture)}} {{mod=@{Agriculture_bonus}}} {{r1=[[@{d20}+@{Agriculture_bonus}@{pbd_safe}]]}} @{rtype}+@{Agriculture_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Agriculture</button>
+											<select name="attr_Agriculture_attribute" title="@{Agriculture_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom" selected="selected">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Alchemy_prof" title="@{Alchemy_prof}" value="(@{pb}*@{Alchemy_type})">
+												<span></span>
+											</div>
+											<span name="attr_Alchemy_bonus" title="@{Alchemy_bonus}">0</span>
+											<button type="roll" name="roll_Alchemy" value="@{wtype}&{template:simple} {{rname=@{Alchemy_attribute} (Alchemy)}} {{mod=@{Alchemy_bonus}}} {{r1=[[@{d20}+@{Alchemy_bonus}@{pbd_safe}]]}} @{rtype}+@{Alchemy_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Alchemy</button>
+											<select name="attr_Alchemy_attribute" title="@{Alchemy_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
 												<option value="Wisdom">Wis</option>
 												<option value="Charisma">Cha</option>
 											</select>
@@ -353,6 +411,54 @@
 										</div>
 										<div class="sheet-pc-skill">
 											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Architecture_prof" title="@{Architecture_prof}" value="(@{pb}*@{Architecture_type})">
+												<span></span>
+											</div>
+											<span name="attr_Architecture_bonus" title="@{Architecture_bonus}">0</span>
+											<button type="roll" name="roll_Architecture" value="@{wtype}&{template:simple} {{rname=@{Architecture_attribute} (Architecture)}} {{mod=@{Architecture_bonus}}} {{r1=[[@{d20}+@{Architecture_bonus}@{pbd_safe}]]}} @{rtype}+@{Architecture_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Architecture</button>
+											<select name="attr_Architecture_attribute" title="@{Architecture_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Area_Knowledge_prof" title="@{Area_Knowledge_prof}" value="(@{pb}*@{Area_Knowledge_type})">
+												<span></span>
+											</div>
+											<span name="attr_Area_Knowledge_bonus" title="@{Area_Knowledge_bonus}">0</span>
+											<button type="roll" name="roll_Area_Knowledge" value="@{wtype}&{template:simple} {{rname=@{Area_Knowledge_attribute} (Area_Knowledge)}} {{mod=@{Area_Knowledge_bonus}}} {{r1=[[@{d20}+@{Area_Knowledge_bonus}@{pbd_safe}]]}} @{rtype}+@{Area_Knowledge_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Area Knowledge</button>
+											<select name="attr_Area_Knowledge_attribute" title="@{Area_Knowledge_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Artisan_prof" title="@{Artisan_prof}" value="(@{pb}*@{Artisan_type})">
+												<span></span>
+											</div>
+											<span name="attr_Artisan_bonus" title="@{Artisan_bonus}">0</span>
+											<button type="roll" name="roll_Artisan" value="@{wtype}&{template:simple} {{rname=@{Artisan_attribute} (Artisan)}} {{mod=@{Artisan_bonus}}} {{r1=[[@{d20}+@{Artisan_bonus}@{pbd_safe}]]}} @{rtype}+@{Artisan_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Artisan</button>
+											<select name="attr_Artisan_attribute" title="@{Artisan_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity" selected="selected">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_athletics_prof" title="@{athletics_prof}" value="(@{pb}*@{athletics_type})">
 												<span></span>
 											</div>
@@ -363,6 +469,70 @@
 												<option value="Dexterity">Dex</option>
 												<option value="Constitution">Con</option>
 												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Business_prof" title="@{Business_prof}" value="(@{pb}*@{Business_type})">
+												<span></span>
+											</div>
+											<span name="attr_Business_bonus" title="@{Business_bonus}">0</span>
+											<button type="roll" name="roll_Business" value="@{wtype}&{template:simple} {{rname=@{Business_attribute} (Business)}} {{mod=@{Business_bonus}}} {{r1=[[@{d20}+@{Business_bonus}@{pbd_safe}]]}} @{rtype}+@{Business_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Business</button>
+											<select name="attr_Business_attribute" title="@{Business_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Climbing_prof" title="@{Climbing_prof}" value="(@{pb}*@{Climbing_type})">
+												<span></span>
+											</div>
+											<span name="attr_Climbing_bonus" title="@{Climbing_bonus}">0</span>
+											<button type="roll" name="roll_Climbing" value="@{wtype}&{template:simple} {{rname=@{Climbing_attribute} (Climbing)}} {{mod=@{Climbing_bonus}}} {{r1=[[@{d20}+@{Climbing_bonus}@{pbd_safe}]]}} @{rtype}+@{Climbing_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Climbing</button>
+											<select name="attr_Climbing_attribute" title="@{Climbing_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity" selected="selected">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Control_Breathing_prof" title="@{Control_Breathing_prof}" value="(@{pb}*@{Control_Breathing_type})">
+												<span></span>
+											</div>
+											<span name="attr_Control_Breathing_bonus" title="@{Control_Breathing_bonus}">0</span>
+											<button type="roll" name="roll_Control_Breathing" value="@{wtype}&{template:simple} {{rname=@{Control_Breathing_attribute} (Control_Breathing)}} {{mod=@{Control_Breathing_bonus}}} {{r1=[[@{d20}+@{Control_Breathing_bonus}@{pbd_safe}]]}} @{rtype}+@{Control_Breathing_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Control Breathing</button>
+											<select name="attr_Control_Breathing_attribute" title="@{Control_Breathing_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution" selected="selected">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Culture_prof" title="@{Culture_prof}" value="(@{pb}*@{Culture_type})">
+												<span></span>
+											</div>
+											<span name="attr_Culture_bonus" title="@{Culture_bonus}">0</span>
+											<button type="roll" name="roll_Culture" value="@{wtype}&{template:simple} {{rname=@{Culture_attribute} (Culture)}} {{mod=@{Culture_bonus}}} {{r1=[[@{d20}+@{Culture_bonus}@{pbd_safe}]]}} @{rtype}+@{Culture_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Culture</button>
+											<select name="attr_Culture_attribute" title="@{Culture_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
 												<option value="Wisdom">Wis</option>
 												<option value="Charisma">Cha</option>
 											</select>
@@ -381,6 +551,150 @@
 												<option value="Intelligence">Int</option>
 												<option value="Wisdom">Wis</option>
 												<option value="Charisma" selected="selected">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Disguise_prof" title="@{Disguise_prof}" value="(@{pb}*@{Disguise_type})">
+												<span></span>
+											</div>
+											<span name="attr_Disguise_bonus" title="@{Disguise_bonus}">0</span>
+											<button type="roll" name="roll_Disguise" value="@{wtype}&{template:simple} {{rname=@{Disguise_attribute} (Disguise)}} {{mod=@{Disguise_bonus}}} {{r1=[[@{d20}+@{Disguise_bonus}@{pbd_safe}]]}} @{rtype}+@{Disguise_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Disguise</button>
+											<select name="attr_Disguise_attribute" title="@{Disguise_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma" selected="selected">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Domestic_Arts_prof" title="@{Domestic_Arts_prof}" value="(@{pb}*@{Domestic_Arts_type})">
+												<span></span>
+											</div>
+											<span name="attr_Domestic_Arts_bonus" title="@{Domestic_Arts_bonus}">0</span>
+											<button type="roll" name="roll_Domestic_Arts" value="@{wtype}&{template:simple} {{rname=@{Domestic_Arts_attribute} (Domestic_Arts)}} {{mod=@{Domestic_Arts_bonus}}} {{r1=[[@{d20}+@{Domestic_Arts_bonus}@{pbd_safe}]]}} @{rtype}+@{Domestic_Arts_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Domestic Arts</button>
+											<select name="attr_Domestic_Arts_attribute" title="@{Domestic_Arts_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom" selected="selected">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Empathy_prof" title="@{Empathy_prof}" value="(@{pb}*@{Empathy_type})">
+												<span></span>
+											</div>
+											<span name="attr_Empathy_bonus" title="@{Empathy_bonus}">0</span>
+											<button type="roll" name="roll_Empathy" value="@{wtype}&{template:simple} {{rname=@{Empathy_attribute} (Empathy)}} {{mod=@{Empathy_bonus}}} {{r1=[[@{d20}+@{Empathy_bonus}@{pbd_safe}]]}} @{rtype}+@{Empathy_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Empathy</button>
+											<select name="attr_Empathy_attribute" title="@{Empathy_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma" selected="selected">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Engineering_prof" title="@{Engineering_prof}" value="(@{pb}*@{Engineering_type})">
+												<span></span>
+											</div>
+											<span name="attr_Engineering_bonus" title="@{Engineering_bonus}">0</span>
+											<button type="roll" name="roll_Engineering" value="@{wtype}&{template:simple} {{rname=@{Engineering_attribute} (Engineering)}} {{mod=@{Engineering_bonus}}} {{r1=[[@{d20}+@{Engineering_bonus}@{pbd_safe}]]}} @{rtype}+@{Engineering_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Engineering</button>
+											<select name="attr_Engineering_attribute" title="@{Engineering_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Etiquette_prof" title="@{Etiquette_prof}" value="(@{pb}*@{Etiquette_type})">
+												<span></span>
+											</div>
+											<span name="attr_Etiquette_bonus" title="@{Etiquette_bonus}">0</span>
+											<button type="roll" name="roll_Etiquette" value="@{wtype}&{template:simple} {{rname=@{Etiquette_attribute} (Etiquette)}} {{mod=@{Etiquette_bonus}}} {{r1=[[@{d20}+@{Etiquette_bonus}@{pbd_safe}]]}} @{rtype}+@{Etiquette_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Etiquette</button>
+											<select name="attr_Etiquette_attribute" title="@{Etiquette_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma" selected="selected">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Focus_prof" title="@{Focus_prof}" value="(@{pb}*@{Focus_type})">
+												<span></span>
+											</div>
+											<span name="attr_Focus_bonus" title="@{Focus_bonus}">0</span>
+											<button type="roll" name="roll_Focus" value="@{wtype}&{template:simple} {{rname=@{Focus_attribute} (Focus)}} {{mod=@{Focus_bonus}}} {{r1=[[@{d20}+@{Focus_bonus}@{pbd_safe}]]}} @{rtype}+@{Focus_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Focus</button>
+											<select name="attr_Focus_attribute" title="@{Focus_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom" selected="selected">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Forgery_prof" title="@{Forgery_prof}" value="(@{pb}*@{Forgery_type})">
+												<span></span>
+											</div>
+											<span name="attr_Forgery_bonus" title="@{Forgery_bonus}">0</span>
+											<button type="roll" name="roll_Forgery" value="@{wtype}&{template:simple} {{rname=@{Forgery_attribute} (Forgery)}} {{mod=@{Forgery_bonus}}} {{r1=[[@{d20}+@{Forgery_bonus}@{pbd_safe}]]}} @{rtype}+@{Forgery_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Forgery</button>
+											<select name="attr_Forgery_attribute" title="@{Forgery_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity" selected="selected">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Gaming_prof" title="@{Gaming_prof}" value="(@{pb}*@{Gaming_type})">
+												<span></span>
+											</div>
+											<span name="attr_Gaming_bonus" title="@{Gaming_bonus}">0</span>
+											<button type="roll" name="roll_Gaming" value="@{wtype}&{template:simple} {{rname=@{Gaming_attribute} (Gaming)}} {{mod=@{Gaming_bonus}}} {{r1=[[@{d20}+@{Gaming_bonus}@{pbd_safe}]]}} @{rtype}+@{Gaming_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Gaming</button>
+											<select name="attr_Gaming_attribute" title="@{Gaming_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom" selected="selected">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Helming_prof" title="@{Helming_prof}" value="(@{pb}*@{Helming_type})">
+												<span></span>
+											</div>
+											<span name="attr_Helming_bonus" title="@{Helming_bonus}">0</span>
+											<button type="roll" name="roll_Helming" value="@{wtype}&{template:simple} {{rname=@{Helming_attribute} (Helming)}} {{mod=@{Helming_bonus}}} {{r1=[[@{d20}+@{Helming_bonus}@{pbd_safe}]]}} @{rtype}+@{Helming_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Helming</button>
+											<select name="attr_Helming_attribute" title="@{Helming_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity" selected="selected">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
 											</select>
 										</div>
 										<div class="sheet-pc-skill">
@@ -407,6 +721,22 @@
 											<span name='attr_insight_bonus' title='@{insight_bonus}'>0</span>
 											<button type='roll' name='roll_insight' value='@{wtype}&{template:simple} {{rname=@{insight_attribute} (Insight)}} {{mod=@{insight_bonus}}} {{r1=[[@{d20}+@{insight_bonus}@{pbd_safe}]]}} @{rtype}+@{insight_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Insight</button>
 											<select name="attr_insight_attribute" title="@{insight_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom" selected="selected">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Interrogation_prof" title="@{Interrogation_prof}" value="(@{pb}*@{Interrogation_type})">
+												<span></span>
+											</div>
+											<span name="attr_Interrogation_bonus" title="@{Interrogation_bonus}">0</span>
+											<button type="roll" name="roll_Interrogation" value="@{wtype}&{template:simple} {{rname=@{Interrogation_attribute} (Interrogation)}} {{mod=@{Interrogation_bonus}}} {{r1=[[@{d20}+@{Interrogation_bonus}@{pbd_safe}]]}} @{rtype}+@{Interrogation_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Interrogation</button>
+											<select name="attr_Interrogation_attribute" title="@{Interrogation_attribute}">
 												<option value="Strength">Str</option>
 												<option value="Dexterity">Dex</option>
 												<option value="Constitution">Con</option>
@@ -449,6 +779,38 @@
 										</div>
 										<div class="sheet-pc-skill">
 											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Law_prof" title="@{Law_prof}" value="(@{pb}*@{Law_type})">
+												<span></span>
+											</div>
+											<span name="attr_Law_bonus" title="@{Law_bonus}">0</span>
+											<button type="roll" name="roll_Law" value="@{wtype}&{template:simple} {{rname=@{Law_attribute} (Law)}} {{mod=@{Law_bonus}}} {{r1=[[@{d20}+@{Law_bonus}@{pbd_safe}]]}} @{rtype}+@{Law_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Law</button>
+											<select name="attr_Law_attribute" title="@{Law_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Leadership_prof" title="@{Leadership_prof}" value="(@{pb}*@{Leadership_type})">
+												<span></span>
+											</div>
+											<span name="attr_Leadership_bonus" title="@{Leadership_bonus}">0</span>
+											<button type="roll" name="roll_Leadership" value="@{wtype}&{template:simple} {{rname=@{Leadership_attribute} (Leadership)}} {{mod=@{Leadership_bonus}}} {{r1=[[@{d20}+@{Leadership_bonus}@{pbd_safe}]]}} @{rtype}+@{Leadership_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Leadership</button>
+											<select name="attr_Leadership_attribute" title="@{Leadership_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma" selected="selected">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_medicine_prof" title="@{medicine_prof}" value="(@{pb}*@{medicine_type})">
 												<span></span>
 											</div>
@@ -465,12 +827,44 @@
 										</div>
 										<div class="sheet-pc-skill">
 											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Mining_prof" title="@{Mining_prof}" value="(@{pb}*@{Mining_type})">
+												<span></span>
+											</div>
+											<span name="attr_Mining_bonus" title="@{Mining_bonus}">0</span>
+											<button type="roll" name="roll_Mining" value="@{wtype}&{template:simple} {{rname=@{Mining_attribute} (Mining)}} {{mod=@{Mining_bonus}}} {{r1=[[@{d20}+@{Mining_bonus}@{pbd_safe}]]}} @{rtype}+@{Mining_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Mining</button>
+											<select name="attr_Mining_attribute" title="@{Mining_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_nature_prof" title="@{nature_prof}" value="(@{pb}*@{nature_type})">
 												<span></span>
 											</div>
 											<span name='attr_nature_bonus' title='@{nature_bonus}'>0</span>
 											<button type='roll' name='roll_nature' value='@{wtype}&{template:simple} {{rname=@{nature_attribute} (Nature)}} {{mod=@{nature_bonus}}} {{r1=[[@{d20}+@{nature_bonus}@{pbd_safe}]]}} @{rtype}+@{nature_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Nature</button>
 											<select name="attr_nature_attribute" title="@{nature_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Navigation_prof" title="@{Navigation_prof}" value="(@{pb}*@{Navigation_type})">
+												<span></span>
+											</div>
+											<span name="attr_Navigation_bonus" title="@{Navigation_bonus}">0</span>
+											<button type="roll" name="roll_Navigation" value="@{wtype}&{template:simple} {{rname=@{Navigation_attribute} (Navigation)}} {{mod=@{Navigation_bonus}}} {{r1=[[@{d20}+@{Navigation_bonus}@{pbd_safe}]]}} @{rtype}+@{Navigation_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Navigation</button>
+											<select name="attr_Navigation_attribute" title="@{Navigation_attribute}">
 												<option value="Strength">Str</option>
 												<option value="Dexterity">Dex</option>
 												<option value="Constitution">Con</option>
@@ -529,6 +923,22 @@
 										</div>
 										<div class="sheet-pc-skill">
 											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Physics_prof" title="@{Physics_prof}" value="(@{pb}*@{Physics_type})">
+												<span></span>
+											</div>
+											<span name="attr_Physics_bonus" title="@{Physics_bonus}">0</span>
+											<button type="roll" name="roll_Physics" value="@{wtype}&{template:simple} {{rname=@{Physics_attribute} (Physics)}} {{mod=@{Physics_bonus}}} {{r1=[[@{d20}+@{Physics_bonus}@{pbd_safe}]]}} @{rtype}+@{Physics_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Physics</button>
+											<select name="attr_Physics_attribute" title="@{Physics_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence" selected="selected">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_religion_prof" title="@{religion_prof}" value="(@{pb}*@{religion_type})">
 												<span></span>
 											</div>
@@ -541,6 +951,38 @@
 												<option value="Intelligence" selected="selected">Int</option>
 												<option value="Wisdom">Wis</option>
 												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Riding_prof" title="@{Riding_prof}" value="(@{pb}*@{Riding_type})">
+												<span></span>
+											</div>
+											<span name="attr_Riding_bonus" title="@{Riding_bonus}">0</span>
+											<button type="roll" name="roll_Riding" value="@{wtype}&{template:simple} {{rname=@{Riding_attribute} (Riding)}} {{mod=@{Riding_bonus}}} {{r1=[[@{d20}+@{Riding_bonus}@{pbd_safe}]]}} @{rtype}+@{Riding_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Riding</button>
+											<select name="attr_Riding_attribute" title="@{Riding_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity" selected="selected">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Seduction_prof" title="@{Seduction_prof}" value="(@{pb}*@{Seduction_type})">
+												<span></span>
+											</div>
+											<span name="attr_Seduction_bonus" title="@{Seduction_bonus}">0</span>
+											<button type="roll" name="roll_Seduction" value="@{wtype}&{template:simple} {{rname=@{Seduction_attribute} (Seduction)}} {{mod=@{Seduction_bonus}}} {{r1=[[@{d20}+@{Seduction_bonus}@{pbd_safe}]]}} @{rtype}+@{Seduction_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Seduction</button>
+											<select name="attr_Seduction_attribute" title="@{Seduction_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma" selected="selected">Cha</option>
 											</select>
 										</div>
 										<div class="sheet-pc-skill sheet-pc-skill-sleight-of-hand">
@@ -577,12 +1019,92 @@
 										</div>
 										<div class="sheet-pc-skill">
 											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Street_Sense_prof" title="@{Street_Sense_prof}" value="(@{pb}*@{Street_Sense_type})">
+												<span></span>
+											</div>
+											<span name="attr_Street_Sense_bonus" title="@{Street_Sense_bonus}">0</span>
+											<button type="roll" name="roll_Street_Sense" value="@{wtype}&{template:simple} {{rname=@{Street_Sense_attribute} (Street_Sense)}} {{mod=@{Street_Sense_bonus}}} {{r1=[[@{d20}+@{Street_Sense_bonus}@{pbd_safe}]]}} @{rtype}+@{Street_Sense_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Street Sense</button>
+											<select name="attr_Street_Sense_attribute" title="@{Street_Sense_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma" selected="selected">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
 												<input type="checkbox" name="attr_survival_prof" title="@{survival_prof}" value="(@{pb}*@{survival_type})">
 												<span></span>
 											</div>
 											<span name='attr_survival_bonus' title='@{survival_bonus}'>0</span>
 											<button type='roll' name='roll_survival' value='@{wtype}&{template:simple} {{rname=@{survival_attribute} (Survival)}} {{mod=@{survival_bonus}}} {{r1=[[@{d20}+@{survival_bonus}@{pbd_safe}]]}} @{rtype}+@{survival_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}'>Survival</button>
 											<select name="attr_survival_attribute" title="@{survival_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom" selected="selected">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Swimming_prof" title="@{Swimming_prof}" value="(@{pb}*@{Swimming_type})">
+												<span></span>
+											</div>
+											<span name="attr_Swimming_bonus" title="@{Swimming_bonus}">0</span>
+											<button type="roll" name="roll_Swimming" value="@{wtype}&{template:simple} {{rname=@{Swimming_attribute} (Swimming)}} {{mod=@{Swimming_bonus}}} {{r1=[[@{d20}+@{Swimming_bonus}@{pbd_safe}]]}} @{rtype}+@{Swimming_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Swimming</button>
+											<select name="attr_Swimming_attribute" title="@{Swimming_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution" selected="selected">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Traps_prof" title="@{Traps_prof}" value="(@{pb}*@{Traps_type})">
+												<span></span>
+											</div>
+											<span name="attr_Traps_bonus" title="@{Traps_bonus}">0</span>
+											<button type="roll" name="roll_Traps" value="@{wtype}&{template:simple} {{rname=@{Traps_attribute} (Traps)}} {{mod=@{Traps_bonus}}} {{r1=[[@{d20}+@{Traps_bonus}@{pbd_safe}]]}} @{rtype}+@{Traps_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Traps</button>
+											<select name="attr_Traps_attribute" title="@{Traps_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity" selected="selected">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_Visual_Arts_prof" title="@{Visual_Arts_prof}" value="(@{pb}*@{Visual_Arts_type})">
+												<span></span>
+											</div>
+											<span name="attr_Visual_Arts_bonus" title="@{Visual_Arts_bonus}">0</span>
+											<button type="roll" name="roll_Visual_Arts" value="@{wtype}&{template:simple} {{rname=@{Visual_Arts_attribute} (Visual_Arts)}} {{mod=@{Visual_Arts_bonus}}} {{r1=[[@{d20}+@{Visual_Arts_bonus}@{pbd_safe}]]}} @{rtype}+@{Visual_Arts_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Visual Arts</button>
+											<select name="attr_Visual_Arts_attribute" title="@{Visual_Arts_attribute}">
+												<option value="Strength">Str</option>
+												<option value="Dexterity">Dex</option>
+												<option value="Constitution">Con</option>
+												<option value="Intelligence">Int</option>
+												<option value="Wisdom" selected="selected">Wis</option>
+												<option value="Charisma">Cha</option>
+											</select>
+										</div>
+										<div class="sheet-pc-skill">
+											<div class="sheet-checkbox-image">
+												<input type="checkbox" name="attr_warfare_prof" title="@{warfare_prof}" value="(@{pb}*@{warfare_type})">
+												<span></span>
+											</div>
+											<span name="attr_warfare_bonus" title="@{warfare_bonus}">0</span>
+											<button type="roll" name="roll_warfare" value="@{wtype}&{template:simple} {{rname=@{warfare_attribute} (Warfare)}} {{mod=@{warfare_bonus}}} {{r1=[[@{d20}+@{warfare_bonus}@{pbd_safe}]]}} @{rtype}+@{warfare_bonus}@{pbd_safe}]]}} {{global=@{global_skill_mod}}} @{charname_output}">Warfare</button>
+											<select name="attr_warfare_attribute" title="@{warfare_attribute}">
 												<option value="Strength">Str</option>
 												<option value="Dexterity">Dex</option>
 												<option value="Constitution">Con</option>
@@ -770,23 +1292,6 @@
 									<div class="sheet-container-header">Speed</div>
 									<div class="sheet-container-body">
 										<input type="text" name="attr_speed" title="@{speed}">
-									</div>
-								</div>
-								<div class="sheet-container-bar sheet-pc-fate">
-									<div class="sheet-container-header">Fate</div>
-									<div class="sheet-container-body">
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_fate_1" title="@{fate_1}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_fate_2" title="@{fate_2}">
-											<span></span>
-										</div>
-										<div class="sheet-checkbox-image">
-											<input type="checkbox" name="attr_fate_3" title="@{fate_3}">
-											<span></span>
-										</div>
 									</div>
 								</div>
 								<div class="sheet-container-bar sheet-pc-inspiration">
@@ -5289,7 +5794,7 @@
 													<label>Roll Queries:</label>
 													<select name="attr_rtype" title="@{rtype}">
 														<option value="{{always=1}} {{r2=[[@{d20}">Always Roll Advantage</option>
-														<option value="@{advantagetoggle}">Advantage Toggle</option>
+														<option value="@{advantagetoggle}" selected="selected">Advantage Toggle</option>
 														<option value="{{query=1}} ?{Advantage?|Normal Roll,&#123&#123normal=1&#125&#125 &#123&#123r2=[[0d20|Advantage,&#123&#123advantage=1&#125&#125 &#123&#123r2=[[@{d20}|Disadvantage,&#123&#123disadvantage=1&#125&#125 &#123&#123r2=[[@{d20}}">Query Advantage</option>
 														<option value="{{normal=1}} {{r2=[[0d20">Never Roll Advantage</option>
 													</select>
@@ -5298,7 +5803,7 @@
 													<label>Whisper Rolls to GM:</label>
 													<select name="attr_wtype" title="@{wtype}">
 														<option value="">Never Whisper Rolls</option>
-														<option value="@{whispertoggle}">Whisper Toggle</option>
+														<option value="@{whispertoggle}"  selected="selected">Whisper Toggle</option>
 														<option value="?{Whisper?|Public Roll,|Whisper Roll,/w gm }">Query Whisper</option>
 														<option value="/w gm ">Always Whisper Rolls</option>
 													</select>
@@ -5357,8 +5862,8 @@
 												<div class="sheet-form-group">
 													<label>Add Character Name to Templates:</label>
 													<select name="attr_charname_output" title="@{charname_output}">
-														<option value="{{charname=@{character_name}}}">On</option>
-														<option value="charname=@{character_name}" selected="selected">Off</option>
+														<option value="{{charname=@{character_name}}}" selected="selected">On</option>
+														<option value="charname=@{character_name}">Off</option>
 													</select>
 												</div>
 												<div class="sheet-form-group">
@@ -5371,7 +5876,7 @@
 												<div class="sheet-form-group">
 													<label>Encumberance:</label>
 													<select name="attr_encumberance_setting" title="@{encumberance_setting}">
-														<option value="off">Simple</option>
+														<option value="off" selected="selected">Simple</option>
 														<option value="on">Variant (PHB p176)</option>
 														<option value="disabled">Off</option>
 													</select>
@@ -5402,13 +5907,13 @@
 									</div>
 								</div>
 								<div class="sheet-container-panel sheet-pc-option-gdd">
-									<div class="sheet-container-header">Giffyglyph's Darker Dungeons</div>
+									<div class="sheet-container-header">TatySaar's Anime 5e</div>
 									<div class="sheet-container-body">
 										<div class="sheet-form sheet-form-borderless">
 											<div class="sheet-form-body">
 												<div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{show_death_failures_flag}">
-														<input type="checkbox" name="attr_show_death_failures_flag" value="1" checked="checked">
+														<input type="checkbox" name="attr_show_death_failures_flag" value="1">
 														<span>Show Death Save Failures Only</span>
 													</label>
 												</div>
@@ -5432,7 +5937,7 @@
 												</div>
 												<div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{use_intelligent_initiative}">
-														<input type="checkbox" name="attr_use_intelligent_initiative" value="1" checked="checked">
+														<input type="checkbox" name="attr_use_intelligent_initiative" value="1">
 														<span>Use Intelligence for Initiative</span>
 													</label>
 												</div>
@@ -5617,9 +6122,33 @@
 										<div class="sheet-form sheet-form-borderless">
 											<div class="sheet-form-borderless">
 												<div class="sheet-form-group">
+													<label>Academia Modifier:</label>
+													<input type="text" name="attr_Academia_flat" placeholder="0" title="@{Academia_flat}">
+													<select name="attr_Academia_type" title="@{Academia_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
 													<label>Acrobatics Modifier:</label>
 													<input type="text" name="attr_acrobatics_flat" placeholder="0" title="@{acrobatics_flat}">
 													<select name="attr_acrobatics_type" title="@{acrobatics_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Agriculture Modifier:</label>
+													<input type="text" name="attr_Agriculture_flat" placeholder="0" title="@{Agriculture_flat}">
+													<select name="attr_Agriculture_type" title="@{Agriculture_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Alchemy Modifier:</label>
+													<input type="text" name="attr_Alchemy_flat" placeholder="0" title="@{Alchemy_flat}">
+													<select name="attr_Alchemy_type" title="@{Alchemy_type}">
 														<option value="1" selected="selected">Normal</option>
 														<option value="2">Expertise</option>
 													</select>
@@ -5641,6 +6170,30 @@
 													</select>
 												</div>
 												<div class="sheet-form-group">
+													<label>Architecture Modifier:</label>
+													<input type="text" name="attr_Architecture_flat" placeholder="0" title="@{Architecture_flat}">
+													<select name="attr_Architecture_type" title="@{Architecture_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Area Knowledge Modifier:</label>
+													<input type="text" name="attr_Area_Knowledge_flat" placeholder="0" title="@{Area_Knowledge_flat}">
+													<select name="attr_Area_Knowledge_type" title="@{Area_Knowledge_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Artisan Modifier:</label>
+													<input type="text" name="attr_Artisan_flat" placeholder="0" title="@{Artisan_flat}">
+													<select name="attr_Artisan_type" title="@{Artisan_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
 													<label>Athletics Modifier:</label>
 													<input type="text" name="attr_athletics_flat" placeholder="0" title="@{athletics_flat}">
 													<select name="attr_athletics_type" title="@{athletics_type}">
@@ -5649,9 +6202,113 @@
 													</select>
 												</div>
 												<div class="sheet-form-group">
+													<label>Business Modifier:</label>
+													<input type="text" name="attr_Business_flat" placeholder="0" title="@{Business_flat}">
+													<select name="attr_Business_type" title="@{Business_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Climbing Modifier:</label>
+													<input type="text" name="attr_Climbing_flat" placeholder="0" title="@{Climbing_flat}">
+													<select name="attr_Climbing_type" title="@{Climbing_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Controlled Breathing Modifier:</label>
+													<input type="text" name="attr_Controlled_Breathing_flat" placeholder="0" title="@{Controlled_Breathing_flat}">
+													<select name="attr_Controlled_Breathing_type" title="@{Controlled_Breathing_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Culture Modifier:</label>
+													<input type="text" name="attr_Culture_flat" placeholder="0" title="@{Culture_flat}">
+													<select name="attr_Culture_type" title="@{Culture_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
 													<label>Deception Modifier:</label>
 													<input type="text" name="attr_deception_flat" placeholder="0" title="@{deception_flat}">
 													<select name="attr_deception_type" title="@{deception_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Disguise Modifier:</label>
+													<input type="text" name="attr_Disguise_flat" placeholder="0" title="@{Disguise_flat}">
+													<select name="attr_Disguise_type" title="@{Disguise_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Domestic Arts Modifier:</label>
+													<input type="text" name="attr_Domestic_Arts_flat" placeholder="0" title="@{Domestic_Arts_flat}">
+													<select name="attr_Domestic_Arts_type" title="@{Domestic_Arts_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Empathy Modifier:</label>
+													<input type="text" name="attr_Empathy_flat" placeholder="0" title="@{Empathy_flat}">
+													<select name="attr_Empathy_type" title="@{Empathy_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Engineering Modifier:</label>
+													<input type="text" name="attr_Engineering_flat" placeholder="0" title="@{Engineering_flat}">
+													<select name="attr_Engineering_type" title="@{Engineering_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Etiquette Modifier:</label>
+													<input type="text" name="attr_Etiquette_flat" placeholder="0" title="@{Etiquette_flat}">
+													<select name="attr_Etiquette_type" title="@{Etiquette_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Focus Modifier:</label>
+													<input type="text" name="attr_Focus_flat" placeholder="0" title="@{Focus_flat}">
+													<select name="attr_Focus_type" title="@{Focus_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Forgery Modifier:</label>
+													<input type="text" name="attr_Forgery_flat" placeholder="0" title="@{Forgery_flat}">
+													<select name="attr_Forgery_type" title="@{Forgery_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Gaming Modifier:</label>
+													<input type="text" name="attr_Gaming_flat" placeholder="0" title="@{Gaming_flat}">
+													<select name="attr_Gaming_type" title="@{Gaming_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Helming Modifier:</label>
+													<input type="text" name="attr_Helming_flat" placeholder="0" title="@{Helming_flat}">
+													<select name="attr_Helming_type" title="@{Helming_type}">
 														<option value="1" selected="selected">Normal</option>
 														<option value="2">Expertise</option>
 													</select>
@@ -5673,6 +6330,14 @@
 													</select>
 												</div>
 												<div class="sheet-form-group">
+													<label>Interrogation Modifier:</label>
+													<input type="text" name="attr_Interrogation_flat" placeholder="0" title="@{Interrogation_flat}">
+													<select name="attr_Interrogation_type" title="@{Interrogation_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
 													<label>Intimidation Modifier:</label>
 													<input type="text" name="attr_intimidation_flat" placeholder="0" title="@{intimidation_flat}">
 													<select name="attr_intimidation_type" title="@{intimidation_type}">
@@ -5689,6 +6354,22 @@
 													</select>
 												</div>
 												<div class="sheet-form-group">
+													<label>Law Modifier:</label>
+													<input type="text" name="attr_Law_flat" placeholder="0" title="@{Law_flat}">
+													<select name="attr_Law_type" title="@{Law_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Leadership Modifier:</label>
+													<input type="text" name="attr_Leadership_flat" placeholder="0" title="@{Leadership_flat}">
+													<select name="attr_Leadership_type" title="@{Leadership_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
 													<label>Medicine Modifier:</label>
 													<input type="text" name="attr_medicine_flat" placeholder="0" title="@{medicine_flat}">
 													<select name="attr_medicine_type" title="@{medicine_type}">
@@ -5697,9 +6378,25 @@
 													</select>
 												</div>
 												<div class="sheet-form-group">
+													<label>Mining Modifier:</label>
+													<input type="text" name="attr_Mining_flat" placeholder="0" title="@{Mining_flat}">
+													<select name="attr_Mining_type" title="@{Mining_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
 													<label>Nature Modifier:</label>
 													<input type="text" name="attr_nature_flat" placeholder="0" title="@{nature_flat}">
 													<select name="attr_nature_type" title="@{nature_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Navigation Modifier:</label>
+													<input type="text" name="attr_Navigation_flat" placeholder="0" title="@{Navigation_flat}">
+													<select name="attr_Navigation_type" title="@{Navigation_type}">
 														<option value="1" selected="selected">Normal</option>
 														<option value="2">Expertise</option>
 													</select>
@@ -5729,9 +6426,33 @@
 													</select>
 												</div>
 												<div class="sheet-form-group">
+													<label>Physics Modifier:</label>
+													<input type="text" name="attr_Physics_flat" placeholder="0" title="@{Physics_flat}">
+													<select name="attr_Physics_type" title="@{Physics_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
 													<label>Religion Modifier:</label>
 													<input type="text" name="attr_religion_flat" placeholder="0" title="@{religion_flat}">
 													<select name="attr_religion_type" title="@{religion_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Riding Modifier:</label>
+													<input type="text" name="attr_Riding_flat" placeholder="0" title="@{Riding_flat}">
+													<select name="attr_Riding_type" title="@{Riding_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Seduction Modifier:</label>
+													<input type="text" name="attr_Seduction_flat" placeholder="0" title="@{Seduction_flat}">
+													<select name="attr_Seduction_type" title="@{Seduction_type}">
 														<option value="1" selected="selected">Normal</option>
 														<option value="2">Expertise</option>
 													</select>
@@ -5753,9 +6474,49 @@
 													</select>
 												</div>
 												<div class="sheet-form-group">
+													<label>Street Sense Modifier:</label>
+													<input type="text" name="attr_Street_Sense_flat" placeholder="0" title="@{Street_Sense_flat}">
+													<select name="attr_Street_Sense_type" title="@{Street_Sense_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
 													<label>Survival Modifier:</label>
 													<input type="text" name="attr_survival_flat" placeholder="0" title="@{survival_flat}">
 													<select name="attr_survival_type" title="@{survival_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Swimming Modifier:</label>
+													<input type="text" name="attr_Swimming_flat" placeholder="0" title="@{Swimming_flat}">
+													<select name="attr_Swimming_type" title="@{Swimming_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Traps Modifier:</label>
+													<input type="text" name="attr_Traps_flat" placeholder="0" title="@{Traps_flat}">
+													<select name="attr_Traps_type" title="@{Traps_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Visual Arts Modifier:</label>
+													<input type="text" name="attr_Visual_Arts_flat" placeholder="0" title="@{Visual_Arts_flat}">
+													<select name="attr_Visual_Arts_type" title="@{Visual_Arts_type}">
+														<option value="1" selected="selected">Normal</option>
+														<option value="2">Expertise</option>
+													</select>
+												</div>
+												<div class="sheet-form-group">
+													<label>Warfare Modifier:</label>
+													<input type="text" name="attr_warfare_flat" placeholder="0" title="@{warfare_flat}">
+													<select name="attr_warfare_type" title="@{warfare_type}">
 														<option value="1" selected="selected">Normal</option>
 														<option value="2">Expertise</option>
 													</select>
@@ -5780,7 +6541,7 @@
 				</div>
 			</div>
 			<div class="sheet-section-pc-footer">
-				<p>Giffyglyph's D&D 5e Character Sheet & Trackers</p>
+				<p>TatySaar's Anime5e Character Sheet & Trackers - Based on Giffyglyph's Darker Dungoens</p>
 			</div>
 		</div>
 		<div class="sheet-section-fields">
@@ -5854,6 +6615,39 @@
 			<input type='hidden' name='attr_sleight_of_hand_bonus' value='0'>
 			<input type='hidden' name='attr_stealth_bonus' value='0'>
 			<input type='hidden' name='attr_survival_bonus' value='0'>
+			<input type='hidden' name='attr_Academia_bonus' value='0'>
+			<input type='hidden' name='attr_Agriculture_bonus' value='0'>
+			<input type='hidden' name='attr_Alchemy_bonus' value='0'>
+			<input type='hidden' name='attr_Architecture_bonus' value='0'>
+			<input type='hidden' name='attr_Area_Knowledge_bonus' value='0'>
+			<input type='hidden' name='attr_Artisan_bonus' value='0'>
+			<input type='hidden' name='attr_Business_bonus' value='0'>
+			<input type='hidden' name='attr_Climbing_bonus' value='0'>
+			<input type='hidden' name='attr_Controlled_Breathing_bonus' value='0'>
+			<input type='hidden' name='attr_Culture_bonus' value='0'>
+			<input type='hidden' name='attr_Disguise_bonus' value='0'>
+			<input type='hidden' name='attr_Domestic_Arts_bonus' value='0'>
+			<input type='hidden' name='attr_Empathy_bonus' value='0'>
+			<input type='hidden' name='attr_Engineering_bonus' value='0'>
+			<input type='hidden' name='attr_Etiquette_bonus' value='0'>
+			<input type='hidden' name='attr_Focus_bonus' value='0'>
+			<input type='hidden' name='attr_Forgery_bonus' value='0'>
+			<input type='hidden' name='attr_Gaming_bonus' value='0'>
+			<input type='hidden' name='attr_Helming_bonus' value='0'>
+			<input type='hidden' name='attr_Insight_bonus' value='0'>
+			<input type='hidden' name='attr_Interrogation_bonus' value='0'>
+			<input type='hidden' name='attr_Law_bonus' value='0'>
+			<input type='hidden' name='attr_Leadership_bonus' value='0'>
+			<input type='hidden' name='attr_Mining_bonus' value='0'>
+			<input type='hidden' name='attr_Navigation_bonus' value='0'>
+			<input type='hidden' name='attr_Physics_bonus' value='0'>
+			<input type='hidden' name='attr_Riding_bonus' value='0'>
+			<input type='hidden' name='attr_Seduction_bonus' value='0'>
+			<input type='hidden' name='attr_Street_Sense_bonus' value='0'>
+			<input type='hidden' name='attr_Swimming_bonus' value='0'>
+			<input type='hidden' name='attr_Traps_bonus' value='0'>
+			<input type='hidden' name='attr_Visual_Arts_bonus' value='0'>
+			<input type='hidden' name='attr_Warfare_bonus' value='0'>
 			<input type='hidden' name='attr_lvl1_slots_total' value='0'>
 			<input type='hidden' name='attr_lvl2_slots_total' value='0'>
 			<input type='hidden' name='attr_lvl3_slots_total' value='0'>
@@ -6918,20 +7712,22 @@
 							update_skills(["athletics"]);
 							break;
 						case "dexterity":
-							update_skills(["acrobatics", "sleight_of_hand", "stealth"]);
+							update_skills(["acrobatics", "sleight_of_hand", "stealth", "Artisan", "Climbing", "forgery", "helming", "riding", "traps"]);
 							update_ac();
 							update_initiative();
 							break;
 						case "intelligence":
-							update_skills(["arcana", "history", "investigation", "nature", "religion"]);
+							update_skills(["arcana", "history", "investigation", "nature", "religion", "academia", "Alchemy", "Architecture","Area_Knowledge","Business","Culture","Engineering","Law","Mining","Navigation","Physics"]);
 							update_initiative();
 							break;
 						case "wisdom":
-							update_skills(["animal_handling", "insight", "medicine", "perception", "survival"]);
+							update_skills(["animal_handling", "insight", "medicine", "perception", "survival", "warfare","Agriculture","Domestic_Arts","Focus","Gaming","Interrogation","Visual_Arts"]);
 							break;
 						case "charisma":
-							update_skills(["deception", "intimidation", "performance", "persuasion"]);
+							update_skills(["deception", "intimidation", "performance", "persuasion","Disguise","Empathy","Etiquette","Leadership","Seduction","Street_Sense"]);
 							break;
+						case "constitution":
+							update_skills(["Control_Breathing","Swimming"])
 						default:
 							false;
 					}
@@ -6961,7 +7757,7 @@
 				update_save("death");
 			});
 
-			['acrobatics', 'animal_handling', 'arcana', 'athletics', 'deception', 'history', 'insight', 'intimidation', 'investigation', 'medicine', 'nature', 'perception', 'performance', 'persuasion', 'religion', 'sleight_of_hand', 'stealth', 'survival'].forEach(attr => {
+			['acrobatics', 'animal_handling', 'arcana', 'athletics', 'deception', 'history', 'insight', 'intimidation', 'investigation', 'medicine', 'nature', 'perception', 'performance', 'persuasion', 'religion', 'sleight_of_hand', 'stealth', 'survival', 'Academia','Agriculture','Alchemy','Architecture','Area_Knowledge','Artisan','Athletics','Business','Climbing','Controlled_Breathing','Culture','Disguise','Domestic_Arts','Empathy','Engineering','Etiquette','Focus','Forgery','Gaming','Helming','Interrogation','Law','Leadership','Mining','Navigation','Physics','Riding','Seduction','Street_Sense','Swimming','Traps','Visual_Arts','Warfare'].forEach(attr => {
 				on(`change:${attr}_prof change:${attr}_type change:${attr}_flat change:${attr}_attribute`, function(eventinfo) {
 					if (eventinfo.sourceType === "sheetworker") {
 						return;
@@ -7329,26 +8125,6 @@
 				update_spell_info();
 			});
 
-			on("change:npc_challenge", function() {
-				update_challenge();
-			});
-
-			on("change:npc_str_save_base change:npc_dex_save_base change:npc_con_save_base change:npc_int_save_base change:npc_wis_save_base change:npc_cha_save_base", function(eventinfo) {
-				update_npc_saves();
-			});
-
-			on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_arcana_base change:npc_athletics_base change:npc_deception_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_persuasion_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
-				update_npc_skills();
-			});
-
-			on("change:repeating_npcaction:attack_flag change:repeating_npcaction:attack_type change:repeating_npcaction:attack_range change:repeating_npcaction:attack_target change:repeating_npcaction:attack_tohit change:repeating_npcaction:attack_damage change:repeating_npcaction:attack_damagetype change:repeating_npcaction:attack_damage2 change:repeating_npcaction:attack_damagetype2 change:repeating_npcaction-l:attack_flag change:repeating_npcaction-l:attack_type change:repeating_npcaction-l:attack_range change:repeating_npcaction-l:attack_target change:repeating_npcaction-l:attack_tohit change:repeating_npcaction-l:attack_damage change:repeating_npcaction-l:attack_damagetype change:repeating_npcaction-l:attack_damage2 change:repeating_npcaction-l:attack_damagetype2 change:repeating_npcaction:show_desc change:repeating_npcaction-l:show_desc change:repeating_npcaction:description change:repeating_npcaction-l:description", function(eventinfo) {
-				var actionid = eventinfo.sourceAttribute.substring(20, 40);
-				var legendary = eventinfo.sourceAttribute.indexOf("npcaction-l") > -1 ? true : false;
-				if (legendary) {
-					actionid = eventinfo.sourceAttribute.substring(22, 42);
-				}
-				update_npc_action(actionid, legendary);
-			});
 
 			on("change:core_die change:halflingluck_flag", function() {
 				getAttrs(["core_die", "halflingluck_flag"], function(v) {
@@ -7629,7 +8405,7 @@
 
 			var update_all_ability_checks = function() {
 				update_initiative();
-				update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival", "deception", "intimidation", "performance", "persuasion"]);
+				update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival", "deception", "intimidation", "performance", "persuasion","Academia","Agriculture","Alchemy","Architecture","Area_Knowledge","Artisan","Athletics","Business","Climbing","Controlled_Breathing","Culture","Disguise","Domestic_Arts","Empathy","Engineering","Etiquette","Focus","Forgery","Gaming","Helming","Interrogation","Law","Leadership","Mining","Navigation","Physics","Riding","Seduction","Street_Sense","Swimming","Traps","Visual_Arts","Warfare"]);
 			};
 
 			var update_skills = function(skills_array) {
@@ -9546,6 +10322,105 @@
 					if (mod.indexOf("acrobatics") > -1) {
 						update_skills(["acrobatics"]);
 					};
+					if (mod.indexOf("Academia") > -1) {
+						update_skills(["Academia"]);
+					};
+					if (mod.indexOf("Agriculture") > -1) {
+						update_skills(["Agriculture"]);
+					};
+					if (mod.indexOf("Alchemy") > -1) {
+						update_skills(["Alchemy"]);
+					};
+					if (mod.indexOf("Architecture") > -1) {
+						update_skills(["Architecture"]);
+					};
+					if (mod.indexOf("Area Knowledge") > -1) {
+						update_skills(["Area_Knowledge"]);
+					};
+					if (mod.indexOf("Artisan") > -1) {
+						update_skills(["Artisan"]);
+					};
+					if (mod.indexOf("Athletics") > -1) {
+						update_skills(["Athletics"]);
+					};
+					if (mod.indexOf("Business") > -1) {
+						update_skills(["Business"]);
+					};
+					if (mod.indexOf("Climbing") > -1) {
+						update_skills(["Climbing"]);
+					};
+					if (mod.indexOf("Controlled Breathing") > -1) {
+						update_skills(["Controlled_Breathing"]);
+					};
+					if (mod.indexOf("Culture") > -1) {
+						update_skills(["Culture"]);
+					};
+					if (mod.indexOf("Disguise") > -1) {
+						update_skills(["Disguise"]);
+					};
+					if (mod.indexOf("Domestic Arts") > -1) {
+						update_skills(["Domestic_Arts"]);
+					};
+					if (mod.indexOf("Empathy") > -1) {
+						update_skills(["Empathy"]);
+					};
+					if (mod.indexOf("Engineering") > -1) {
+						update_skills(["Engineering"]);
+					};
+					if (mod.indexOf("Etiquette") > -1) {
+						update_skills(["Etiquette"]);
+					};
+					if (mod.indexOf("Focus") > -1) {
+						update_skills(["Focus"]);
+					};
+					if (mod.indexOf("Forgery") > -1) {
+						update_skills(["Forgery"]);
+					};
+					if (mod.indexOf("Gaming") > -1) {
+						update_skills(["Gaming"]);
+					};
+					if (mod.indexOf("Helming") > -1) {
+						update_skills(["Helming"]);
+					};
+					if (mod.indexOf("Interrogation") > -1) {
+						update_skills(["Interrogation"]);
+					};
+					if (mod.indexOf("Law") > -1) {
+						update_skills(["Law"]);
+					};
+					if (mod.indexOf("Leadership") > -1) {
+						update_skills(["Leadership"]);
+					};
+					if (mod.indexOf("Mining") > -1) {
+						update_skills(["Mining"]);
+					};
+					if (mod.indexOf("Navigation") > -1) {
+						update_skills(["Navigation"]);
+					};
+					if (mod.indexOf("Physics") > -1) {
+						update_skills(["Physics"]);
+					};
+					if (mod.indexOf("Riding") > -1) {
+						update_skills(["Riding"]);
+					};
+					if (mod.indexOf("Seduction") > -1) {
+						update_skills(["Seduction"]);
+					};
+					if (mod.indexOf("Street Sense") > -1) {
+						update_skills(["Street_Sense"]);
+					};
+					if (mod.indexOf("Swimming") > -1) {
+						update_skills(["Swimming"]);
+					};
+					if (mod.indexOf("Traps") > -1) {
+						update_skills(["Traps"]);
+					};
+					if (mod.indexOf("Visual Arts") > -1) {
+						update_skills(["Visual_Arts"]);
+					};
+					if (mod.indexOf("warfare") > -1) {
+						update_skills(["warfare"]);
+					};
 					if (mod.indexOf("animal handling") > -1) {
 						update_skills(["animal_handling"]);
 					};
@@ -11392,7 +12267,7 @@
 						update_all_saves();
 					});
 					callbacks.push(function() {
-						update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival", "deception", "intimidation", "performance", "persuasion"]);
+						update_skills(["athletics", "acrobatics", "sleight_of_hand", "stealth", "arcana", "history", "investigation", "nature", "religion", "animal_handling", "insight", "medicine", "perception", "survival", "deception", "intimidation", "performance", "persuasion","Academia","Agriculture","Alchemy","Architecture","Area_Knowledge","Artisan","Athletics","Business","Climbing","Controlled_Breathing","Culture","Disguise","Domestic_Arts","Empathy","Engineering","Etiquette","Focus","Forgery","Gaming","Helming","Interrogation","Law","Leadership","Mining","Navigation","Physics","Riding","Seduction","Street_Sense","Swimming","Traps","Visual Arts","Warfare"]);
 					});
 
 					setAttrs(update, {
@@ -11545,703 +12420,6 @@
 				});
 			};
 
-			var update_challenge = function() {
-				getAttrs(["npc_challenge"], function(v) {
-					var update = {};
-					var xp = 0;
-					var pb = 0;
-					switch (v.npc_challenge.toString()) {
-						case "0":
-							xp = "10";
-							pb = 2;
-							break;
-						case "1/8":
-							xp = "25";
-							pb = 2;
-							break;
-						case "1/4":
-							xp = "50";
-							pb = 2;
-							break;
-						case "1/2":
-							xp = "100";
-							pb = 2;
-							break;
-						case "1":
-							xp = "200";
-							pb = 2;
-							break;
-						case "2":
-							xp = "450";
-							pb = 2;
-							break;
-						case "3":
-							xp = "700";
-							pb = 2;
-							break;
-						case "4":
-							xp = "1100";
-							pb = 2;
-							break;
-						case "5":
-							xp = "1800";
-							pb = 3;
-							break;
-						case "6":
-							xp = "2300";
-							pb = 3;
-							break;
-						case "7":
-							xp = "2900";
-							pb = 3;
-							break;
-						case "8":
-							xp = "3900";
-							pb = 3;
-							break;
-						case "9":
-							xp = "5000";
-							pb = 4;
-							break;
-						case "10":
-							xp = "5900";
-							pb = 4;
-							break;
-						case "11":
-							xp = "7200";
-							pb = 4;
-							break;
-						case "12":
-							xp = "8400";
-							pb = 4;
-							break;
-						case "13":
-							xp = "10000";
-							pb = 5;
-							break;
-						case "14":
-							xp = "11500";
-							pb = 5;
-							break;
-						case "15":
-							xp = "13000";
-							pb = 5;
-							break;
-						case "16":
-							xp = "15000";
-							pb = 5;
-							break;
-						case "17":
-							xp = "18000";
-							pb = 6;
-							break;
-						case "18":
-							xp = "20000";
-							pb = 6;
-							break;
-						case "19":
-							xp = "22000";
-							pb = 6;
-							break;
-						case "20":
-							xp = "25000";
-							pb = 6;
-							break;
-						case "21":
-							xp = "33000";
-							pb = 7;
-							break;
-						case "22":
-							xp = "41000";
-							pb = 7;
-							break;
-						case "23":
-							xp = "50000";
-							pb = 7;
-							break;
-						case "24":
-							xp = "62000";
-							pb = 7;
-							break;
-						case "25":
-							xp = "75000";
-							pb = 8;
-							break;
-						case "26":
-							xp = "90000";
-							pb = 8;
-							break;
-						case "27":
-							xp = "105000";
-							pb = 8;
-							break;
-						case "28":
-							xp = "120000";
-							pb = 8;
-							break;
-						case "29":
-							xp = "";
-							pb = 9;
-							break;
-						case "30":
-							xp = "155000";
-							pb = 9;
-							break;
-					}
-					update["npc_xp"] = xp;
-					update["pb_custom"] = pb;
-					update["pb_type"] = "custom";
-					setAttrs(update, {
-						silent: true
-					}, function() {
-						update_pb()
-					});
-				});
-			};
-
-			var update_npc_saves = function() {
-				getAttrs(["npc_str_save_base", "npc_dex_save_base", "npc_con_save_base", "npc_int_save_base", "npc_wis_save_base", "npc_cha_save_base"], function(v) {
-					var update = {};
-					var last_save = 0;
-					var cha_save_flag = 0;
-					var cha_save = "";
-					var wis_save_flag = 0;
-					var wis_save = "";
-					var int_save_flag = 0;
-					var int_save = "";
-					var con_save_flag = 0;
-					var con_save = "";
-					var dex_save_flag = 0;
-					var dex_save = "";
-					var str_save_flag = 0;
-					var str_save = "";
-					// 1 = Positive, 2 = Last, 3 = Negative, 4 = Last Negative
-					if (v.npc_cha_save_base && v.npc_cha_save_base != "@{charisma_mod}") {
-						cha_save = parseInt(v.npc_cha_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							cha_save_flag = cha_save < 0 ? 4 : 2;
-						} else {
-							cha_save_flag = cha_save < 0 ? 3 : 1;
-						}
-					} else {
-						cha_save_flag = 0;
-						cha_save = "";
-					};
-					if (v.npc_wis_save_base && v.npc_wis_save_base != "@{wisdom_mod}") {
-						wis_save = parseInt(v.npc_wis_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							wis_save_flag = wis_save < 0 ? 4 : 2;
-						} else {
-							wis_save_flag = wis_save < 0 ? 3 : 1;
-						}
-					} else {
-						wis_save_flag = 0;
-						wis_save = "";
-					};
-					if (v.npc_int_save_base && v.npc_int_save_base != "@{intelligence_mod}") {
-						int_save = parseInt(v.npc_int_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							int_save_flag = int_save < 0 ? 4 : 2;
-						} else {
-							int_save_flag = int_save < 0 ? 3 : 1;
-						}
-					} else {
-						int_save_flag = 0;
-						int_save = "";
-					};
-					if (v.npc_con_save_base && v.npc_con_save_base != "@{constitution_mod}") {
-						con_save = parseInt(v.npc_con_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							con_save_flag = con_save < 0 ? 4 : 2;
-						} else {
-							con_save_flag = con_save < 0 ? 3 : 1;
-						}
-					} else {
-						con_save_flag = 0;
-						con_save = "";
-					};
-					if (v.npc_dex_save_base && v.npc_dex_save_base != "@{dexterity_mod}") {
-						dex_save = parseInt(v.npc_dex_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							dex_save_flag = dex_save < 0 ? 4 : 2;
-						} else {
-							dex_save_flag = dex_save < 0 ? 3 : 1;
-						}
-					} else {
-						dex_save_flag = 0;
-						dex_save = "";
-					};
-					if (v.npc_str_save_base && v.npc_str_save_base != "@{strength_mod}") {
-						str_save = parseInt(v.npc_str_save_base, 10);
-						if (last_save === 0) {
-							last_save = 1;
-							str_save_flag = str_save < 0 ? 4 : 2;
-						} else {
-							str_save_flag = str_save < 0 ? 3 : 1;
-						}
-					} else {
-						str_save_flag = 0;
-						str_save = "";
-					};
-
-					update["npc_saving_flag"] = "" + cha_save + wis_save + int_save + con_save + dex_save + str_save;
-					update["npc_str_save"] = str_save;
-					update["npc_str_save_flag"] = str_save_flag;
-					update["npc_dex_save"] = dex_save;
-					update["npc_dex_save_flag"] = dex_save_flag;
-					update["npc_con_save"] = con_save;
-					update["npc_con_save_flag"] = con_save_flag;
-					update["npc_int_save"] = int_save;
-					update["npc_int_save_flag"] = int_save_flag;
-					update["npc_wis_save"] = wis_save;
-					update["npc_wis_save_flag"] = wis_save_flag;
-					update["npc_cha_save"] = cha_save;
-					update["npc_cha_save_flag"] = cha_save_flag;
-					setAttrs(update, {
-						silent: true
-					});
-				});
-			};
-
-			var update_npc_skills = function() {
-				getAttrs(["npc_acrobatics_base", "npc_animal_handling_base", "npc_arcana_base", "npc_athletics_base", "npc_deception_base", "npc_history_base", "npc_insight_base", "npc_intimidation_base", "npc_investigation_base", "npc_medicine_base", "npc_nature_base", "npc_perception_base", "npc_performance_base", "npc_persuasion_base", "npc_religion_base", "npc_sleight_of_hand_base", "npc_stealth_base", "npc_survival_base"], function(v) {
-					var update = {};
-					var last_skill = 0;
-					var survival_flag = 0;
-					var survival = "";
-					var stealth_flag = 0;
-					var stealth = "";
-					var sleight_of_hand_flag = 0;
-					var sleight_of_hand = "";
-					var religion_flag = 0;
-					var religion = "";
-					var persuasion_flag = 0;
-					var persuasion = "";
-					var performance_flag = 0;
-					var sperformance = "";
-					var perception_flag = 0;
-					var perception = "";
-					var perception_flag = 0;
-					var perception = "";
-					var nature_flag = 0;
-					var nature = "";
-					var medicine_flag = 0;
-					var medicine = "";
-					var investigation_flag = 0;
-					var investigation = "";
-					var intimidation_flag = 0;
-					var intimidation = "";
-					var insight_flag = 0;
-					var insight = "";
-					var history_flag = 0;
-					var history = "";
-					var deception_flag = 0;
-					var deception = "";
-					var athletics_flag = 0;
-					var athletics = "";
-					var arcana_flag = 0;
-					var arcana = "";
-					var animal_handling_flag = 0;
-					var animal_handling = "";
-					var acrobatics_flag = 0;
-					var acrobatics = "";
-
-					// 1 = Positive, 2 = Last, 3 = Negative, 4 = Last Negative
-					if (v.npc_survival_base && v.npc_survival_base != "@{wisdom_mod}") {
-						survival = parseInt(v.npc_survival_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							survival_flag = survival < 0 ? 4 : 2;
-						} else {
-							survival_flag = survival < 0 ? 3 : 1;
-						}
-					} else {
-						survival_flag = 0;
-						survival = "";
-					};
-					if (v.npc_stealth_base && v.npc_stealth_base != "@{dexterity_mod}") {
-						stealth = parseInt(v.npc_stealth_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							stealth_flag = stealth < 0 ? 4 : 2;
-						} else {
-							stealth_flag = stealth < 0 ? 3 : 1;
-						}
-					} else {
-						stealth_flag = 0;
-						stealth = "";
-					};
-					if (v.npc_sleight_of_hand_base && v.npc_sleight_of_hand_base != "@{dexterity_mod}") {
-						sleight_of_hand = parseInt(v.npc_sleight_of_hand_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							sleight_of_hand_flag = sleight_of_hand < 0 ? 4 : 2;
-						} else {
-							sleight_of_hand_flag = sleight_of_hand < 0 ? 3 : 1;
-						}
-					} else {
-						sleight_of_hand_flag = 0;
-						sleight_of_hand = "";
-					};
-					if (v.npc_religion_base && v.npc_religion_base != "@{intelligence_mod}") {
-						religion = parseInt(v.npc_religion_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							religion_flag = religion < 0 ? 4 : 2;
-						} else {
-							religion_flag = religion < 0 ? 3 : 1;
-						}
-					} else {
-						religion_flag = 0;
-						religion = "";
-					};
-					if (v.npc_persuasion_base && v.npc_persuasion_base != "@{charisma_mod}") {
-						persuasion = parseInt(v.npc_persuasion_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							persuasion_flag = persuasion < 0 ? 4 : 2;
-						} else {
-							persuasion_flag = persuasion < 0 ? 3 : 1;
-						}
-					} else {
-						persuasion_flag = 0;
-						persuasion = "";
-					};
-					if (v.npc_performance_base && v.npc_performance_base != "@{charisma_mod}") {
-						sperformance = parseInt(v.npc_performance_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							performance_flag = sperformance < 0 ? 4 : 2;
-						} else {
-							performance_flag = sperformance < 0 ? 3 : 1;
-						}
-					} else {
-						performance_flag = 0;
-						sperformance = "";
-					};
-					if (v.npc_perception_base && v.npc_perception_base != "@{wisdom_mod}") {
-						perception = parseInt(v.npc_perception_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							perception_flag = perception < 0 ? 4 : 2;
-						} else {
-							perception_flag = perception < 0 ? 3 : 1;
-						}
-					} else {
-						perception_flag = 0;
-						perception = "";
-					};
-					if (v.npc_nature_base && v.npc_nature_base != "@{intelligence_mod}") {
-						nature = parseInt(v.npc_nature_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							nature_flag = nature < 0 ? 4 : 2;
-						} else {
-							nature_flag = nature < 0 ? 3 : 1;
-						}
-					} else {
-						nature_flag = 0;
-						nature = "";
-					};
-					if (v.npc_medicine_base && v.npc_medicine_base != "@{wisdom_mod}") {
-						medicine = parseInt(v.npc_medicine_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							medicine_flag = medicine < 0 ? 4 : 2;
-						} else {
-							medicine_flag = medicine < 0 ? 3 : 1;
-						}
-					} else {
-						medicine_flag = 0;
-						medicine = "";
-					};
-					if (v.npc_investigation_base && v.npc_investigation_base != "@{intelligence_mod}") {
-						investigation = parseInt(v.npc_investigation_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							investigation_flag = investigation < 0 ? 4 : 2;
-						} else {
-							investigation_flag = investigation < 0 ? 3 : 1;
-						}
-					} else {
-						investigation_flag = 0;
-						investigation = "";
-					};
-					if (v.npc_intimidation_base && v.npc_intimidation_base != "@{charisma_mod}") {
-						intimidation = parseInt(v.npc_intimidation_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							intimidation_flag = intimidation < 0 ? 4 : 2;
-						} else {
-							intimidation_flag = intimidation < 0 ? 3 : 1;
-						}
-					} else {
-						intimidation_flag = 0;
-						intimidation = "";
-					};
-					if (v.npc_insight_base && v.npc_insight_base != "@{wisdom_mod}") {
-						insight = parseInt(v.npc_insight_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							insight_flag = insight < 0 ? 4 : 2;
-						} else {
-							insight_flag = insight < 0 ? 3 : 1;
-						}
-					} else {
-						insight_flag = 0;
-						insight = "";
-					};
-					if (v.npc_history_base && v.npc_history_base != "@{intelligence_mod}") {
-						history = parseInt(v.npc_history_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							history_flag = history < 0 ? 4 : 2;
-						} else {
-							history_flag = history < 0 ? 3 : 1;
-						}
-					} else {
-						history_flag = 0;
-						history = "";
-					};
-					if (v.npc_deception_base && v.npc_deception_base != "@{charisma_mod}") {
-						deception = parseInt(v.npc_deception_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							deception_flag = deception < 0 ? 4 : 2;
-						} else {
-							deception_flag = deception < 0 ? 3 : 1;
-						}
-					} else {
-						deception_flag = 0;
-						deception = "";
-					};
-					if (v.npc_athletics_base && v.npc_athletics_base != "@{strength_mod}") {
-						athletics = parseInt(v.npc_athletics_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							athletics_flag = athletics < 0 ? 4 : 2;
-						} else {
-							athletics_flag = athletics < 0 ? 3 : 1;
-						}
-					} else {
-						athletics_flag = 0;
-						athletics = "";
-					};
-					if (v.npc_arcana_base && v.npc_arcana_base != "@{intelligence_mod}") {
-						arcana = parseInt(v.npc_arcana_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							arcana_flag = arcana < 0 ? 4 : 2;
-						} else {
-							arcana_flag = arcana < 0 ? 3 : 1;
-						}
-					} else {
-						arcana_flag = 0;
-						arcana = "";
-					};
-					if (v.npc_animal_handling_base && v.npc_animal_handling_base != "@{wisdom_mod}") {
-						animal_handling = parseInt(v.npc_animal_handling_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							animal_handling_flag = animal_handling < 0 ? 4 : 2;
-						} else {
-							animal_handling_flag = animal_handling < 0 ? 3 : 1;
-						}
-					} else {
-						animal_handling_flag = 0;
-						animal_handling = "";
-					};
-					if (v.npc_acrobatics_base && v.npc_acrobatics_base != "@{dexterity_mod}") {
-						acrobatics = parseInt(v.npc_acrobatics_base, 10);
-						if (last_skill === 0) {
-							last_skill = 1;
-							acrobatics_flag = acrobatics < 0 ? 4 : 2;
-						} else {
-							acrobatics_flag = acrobatics < 0 ? 3 : 1;
-						}
-					} else {
-						acrobatics_flag = 0;
-						acrobatics = "";
-					};
-
-					update["npc_skills_flag"] = "" + acrobatics + animal_handling + arcana + athletics + deception + history + insight + intimidation + investigation + medicine + nature + perception + sperformance + persuasion + religion + sleight_of_hand + stealth + survival;
-					update["npc_stealth_flag"] = stealth_flag;
-					update["npc_survival"] = survival;;
-					update["npc_acrobatics"] = acrobatics;
-					update["npc_acrobatics_flag"] = acrobatics_flag;
-					update["npc_animal_handling"] = animal_handling;
-					update["npc_animal_handling_flag"] = animal_handling_flag;
-					update["npc_arcana"] = arcana;
-					update["npc_arcana_flag"] = arcana_flag;
-					update["npc_athletics"] = athletics;
-					update["npc_athletics_flag"] = athletics_flag;
-					update["npc_deception"] = deception;
-					update["npc_deception_flag"] = deception_flag;
-					update["npc_history"] = history;
-					update["npc_history_flag"] = history_flag;
-					update["npc_insight"] = insight;
-					update["npc_insight_flag"] = insight_flag;
-					update["npc_intimidation"] = intimidation;
-					update["npc_intimidation_flag"] = intimidation_flag;
-					update["npc_investigation"] = investigation;
-					update["npc_investigation_flag"] = investigation_flag;
-					update["npc_medicine"] = medicine;
-					update["npc_medicine_flag"] = medicine_flag;
-					update["npc_nature"] = nature;
-					update["npc_nature_flag"] = nature_flag;
-					update["npc_perception"] = perception;
-					update["npc_perception_flag"] = perception_flag;
-					update["npc_performance"] = sperformance;
-					update["npc_performance_flag"] = performance_flag;
-					update["npc_persuasion"] = persuasion;
-					update["npc_persuasion_flag"] = persuasion_flag;
-					update["npc_religion"] = religion;
-					update["npc_religion_flag"] = religion_flag;
-					update["npc_sleight_of_hand"] = sleight_of_hand;
-					update["npc_sleight_of_hand_flag"] = sleight_of_hand_flag;
-					update["npc_stealth"] = stealth;
-					update["npc_stealth_flag"] = stealth_flag;
-					update["npc_survival"] = survival;
-					update["npc_survival_flag"] = survival_flag;
-					setAttrs(update, {
-						silent: true
-					});
-				});
-			};
-
-			var update_npc_action = function(update_id, legendary) {
-				if (update_id.substring(0, 1) === "-" && update_id.length === 20) {
-					do_update_npc_action([update_id], legendary);
-				} else if (update_id === "all") {
-					var legendary_array = [];
-					var actions_array = [];
-					getSectionIDs("repeating_npcaction-l", function(idarray) {
-						legendary_array = idarray;
-						if (legendary_array.length > 0) {
-							do_update_npc_action(legendary_array, true);
-						}
-						getSectionIDs("repeating_npcaction", function(idarray) {
-							actions_array = idarray.filter(function(i) {
-								return legendary_array.indexOf(i) < 0;
-							});
-							if (actions_array.length > 0) {
-								do_update_npc_action(actions_array, false);
-							};
-						});
-					});
-				};
-			};
-
-			var do_update_npc_action = function(action_array, legendary) {
-				var repvar = legendary ? "repeating_npcaction-l_" : "repeating_npcaction_";
-				var action_attribs = ["dtype"];
-				_.each(action_array, function(actionid) {
-					action_attribs.push(repvar + actionid + "_attack_flag");
-					action_attribs.push(repvar + actionid + "_attack_type");
-					action_attribs.push(repvar + actionid + "_attack_range");
-					action_attribs.push(repvar + actionid + "_attack_target");
-					action_attribs.push(repvar + actionid + "_attack_tohit");
-					action_attribs.push(repvar + actionid + "_attack_damage");
-					action_attribs.push(repvar + actionid + "_attack_damagetype");
-					action_attribs.push(repvar + actionid + "_attack_damage2");
-					action_attribs.push(repvar + actionid + "_attack_damagetype2");
-				});
-
-				getAttrs(action_attribs, function(v) {
-					_.each(action_array, function(actionid) {
-						console.log("UPDATING NPC ACTION: " + actionid);
-						var callbacks = [];
-						var update = {};
-						var onhit = "";
-						var damage_flag = "";
-						var range = "";
-						var attack_flag = v[repvar + actionid + "_attack_flag"] && v[repvar + actionid + "_attack_flag"] != "0" ? "{{attack=1}}" : "";
-						var tohit = v[repvar + actionid + "_attack_tohit"] && isNaN(parseInt(v[repvar + actionid + "_attack_tohit"], 10)) === false ? parseInt(v[repvar + actionid + "_attack_tohit"], 10) : 0;
-						if (v[repvar + actionid + "_attack_type"] && v[repvar + actionid + "_attack_range"]) {
-							if (v[repvar + actionid + "_attack_type"] === "Melee") {
-								var rangetype = "Reach";
-							} else {
-								var rangetype = "Range";
-							};
-							range = ", " + rangetype + " " + v[repvar + actionid + "_attack_range"];
-						}
-						var target = v[repvar + actionid + "_attack_target"] && v[repvar + actionid + "_attack_target"] != "" ? ", " + v[repvar + actionid + "_attack_target"] : ""
-						var attack_tohitrange = "+" + tohit + range + target;
-						var dmg1 = v[repvar + actionid + "_attack_damage"] && v[repvar + actionid + "_attack_damage"] != "" ? v[repvar + actionid + "_attack_damage"] : "";
-						var dmg1type = v[repvar + actionid + "_attack_damagetype"] && v[repvar + actionid + "_attack_damagetype"] != "" ? " " + v[repvar + actionid + "_attack_damagetype"] : "";
-						var dmg2 = v[repvar + actionid + "_attack_damage2"] && v[repvar + actionid + "_attack_damage2"] != "" ? v[repvar + actionid + "_attack_damage2"] : "";
-						var dmg2type = v[repvar + actionid + "_attack_damagetype2"] && v[repvar + actionid + "_attack_damagetype2"] != "" ? " " + v[repvar + actionid + "_attack_damagetype2"] : "";
-						var dmgspacer = dmg1 != "" && dmg2 != "" ? " plus " : "";
-
-						var parsed_dmg1 = parse_roll_string(dmg1);
-						var parsed_dmg2 = parse_roll_string(dmg2);
-
-						if (dmg1 != "") {
-							onhit = onhit + parsed_dmg1.avg + " (" + dmg1 + ")" + dmg1type + " damage";
-						};
-						dmgspacer = dmg1 != "" && dmg2 != "" ? " plus " : "";
-						onhit = onhit + dmgspacer;
-						if (dmg2 != "") {
-							onhit = onhit + parsed_dmg2.avg + " (" + dmg2 + ")" + dmg2type + " damage";
-						};
-						if (dmg1 != "" || dmg2 != "") {
-							damage_flag = damage_flag + "{{damage=1}} "
-						};
-						if (dmg1 != "") {
-							damage_flag = damage_flag + "{{dmg1flag=1}} "
-						};
-						if (dmg2 != "") {
-							damage_flag = damage_flag + "{{dmg2flag=1}} "
-						};
-
-						var crit1 = "";
-						if (parsed_dmg1.rolls.length > 0) {
-							parsed_dmg1.rolls.forEach(function(value) {
-								crit1 += parsed_dmg1.array[value] + "+";
-							});
-							crit1 = crit1.substring(0, crit1.length - 1);
-						}
-
-						var crit2 = "";
-						if (parsed_dmg2.rolls.length > 0) {
-							parsed_dmg2.rolls.forEach(function(value) {
-								crit2 += parsed_dmg2.array[value] + "+";
-							});
-							crit2 = crit2.substring(0, crit2.length - 1);
-						}
-
-						var rollbase = "";
-						if (v.dtype === "full") {
-							rollbase = "@{wtype}&{template:npcaction} " + attack_flag + " @{damage_flag} @{npc_name_flag} {{rname=@{name}}} {{r1=[[@{d20}+(@{attack_tohit}+0)]]}} @{rtype}+(@{attack_tohit}+0)]]}} {{dmg1=[[@{attack_damage}+0]]}} {{dmg1type=@{attack_damagetype}}} {{dmg2=[[@{attack_damage2}+0]]}} {{dmg2type=@{attack_damagetype2}}} {{crit1=[[@{attack_crit}+0]]}} {{crit2=[[@{attack_crit2}+0]]}} {{description=@{show_desc}}} @{charname_output}";
-						} else if (v[repvar + actionid + "_attack_flag"] && v[repvar + actionid + "_attack_flag"] != "0") {
-							if (legendary) {
-								rollbase = "@{wtype}&{template:npcatk} " + attack_flag + " @{damage_flag} @{npc_name_flag} {{rname=[@{name}](~repeating_npcaction-l_npc_dmg)}} {{rnamec=[@{name}](~repeating_npcaction-l_npc_crit)}} {{type=[Attack](~repeating_npcaction-l_npc_dmg)}} {{typec=[Attack](~repeating_npcaction-l_npc_crit)}} {{r1=[[@{d20}+(@{attack_tohit}+0)]]}} @{rtype}+(@{attack_tohit}+0)]]}} {{description=@{show_desc}}} @{charname_output}"
-							} else {
-								rollbase = "@{wtype}&{template:npcatk} " + attack_flag + " @{damage_flag} @{npc_name_flag} {{rname=[@{name}](~repeating_npcaction_npc_dmg)}} {{rnamec=[@{name}](~repeating_npcaction_npc_crit)}} {{type=[Attack](~repeating_npcaction_npc_dmg)}} {{typec=[Attack](~repeating_npcaction_npc_crit)}} {{r1=[[@{d20}+(@{attack_tohit}+0)]]}} @{rtype}+(@{attack_tohit}+0)]]}} {{description=@{show_desc}}} @{charname_output}";
-							}
-						} else if (dmg1 || dmg2) {
-							rollbase = "@{wtype}&{template:npcdmg} @{damage_flag} {{dmg1=[[@{attack_damage}+0]]}} {{dmg1type=@{attack_damagetype}}} {{dmg2=[[@{attack_damage2}+0]]}} {{dmg2type=@{attack_damagetype2}}} {{crit1=[[@{attack_crit}+0]]}} {{crit2=[[@{attack_crit2}+0]]}} @{charname_output}"
-						} else {
-							rollbase = "@{wtype}&{template:npcaction} @{npc_name_flag} {{rname=@{name}}} {{description=@{show_desc}}} @{charname_output}"
-						}
-
-						update[repvar + actionid + "_attack_tohitrange"] = attack_tohitrange;
-						update[repvar + actionid + "_attack_onhit"] = onhit;
-						update[repvar + actionid + "_damage_flag"] = damage_flag;
-						update[repvar + actionid + "_attack_crit"] = crit1;
-						update[repvar + actionid + "_attack_crit2"] = crit2;
-						update[repvar + actionid + "_rollbase"] = rollbase;
-						setAttrs(update, {
-							silent: true
-						});
-					});
-				});
-			};
 
 			var parse_roll_string = function(rollstring) {
 				var out = {
