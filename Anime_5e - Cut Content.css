@@ -1,0 +1,276 @@
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-proficiency-bonus {
+    grid-area: proficiency-bonus; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-proficiency-bonus .sheet-container-body {
+      width: 50px; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saves {
+    grid-area: saves; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill {
+    display: flex;
+    align-items: center; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw:not(:first-of-type),
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill:not(:first-of-type) {
+      border-top: 1px dotted gainsboro; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw .sheet-checkbox-image,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill .sheet-checkbox-image {
+      height: 10px;
+      width: 10px; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw .sheet-checkbox-image span,
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill .sheet-checkbox-image span {
+        padding: 1px; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw input,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill input {
+      width: auto;
+      flex-grow: 0;
+      margin: 0; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw span,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill span {
+      flex-grow: 0;
+      width: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 11px; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw button,
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill button {
+      flex-grow: 1;
+      text-align: left;
+      border: 0;
+      background: none;
+      box-shadow: none;
+      height: 18px;
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+      vertical-align: baseline;
+      color: inherit; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw button span,
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill button span {
+        font-weight: normal;
+        font-size: inherit;
+        width: auto;
+        opacity: .5; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-saving-throw button:hover,
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill button:hover {
+        background: #e5fffb;
+        margin-left: -3px;
+        padding-left: 3px;
+        color: #b61037; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skills {
+    grid-area: skills; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill .sheet-checkbox-image,
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill span {
+    flex-grow: 0;
+    flex-shrink: 0; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill button {
+    flex-grow: 0; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill select {
+    margin: 0;
+    padding: 0;
+    height: 18px;
+    font-size: 11px;
+    width: 5rem;
+    border: none;
+    flex-grow: 1;
+    color: #b3b3b3; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill.sheet-pc-skill-animal-handling button {
+    letter-spacing: -0.6px; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-skill.sheet-pc-skill-sleight-of-hand button {
+    letter-spacing: -0.25px; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools {
+    grid-area: tools; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-container-body-header span:nth-of-type(1) {
+      width: 45px;
+      flex-shrink: 0;
+      padding-left: 10px;
+      text-align: center; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-container-body-header span:nth-of-type(2) {
+      text-align: left; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button {
+      border: none;
+      background: none;
+      box-shadow: none;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button:hover {
+        background: #e5fffb; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(1) {
+        border: 1px solid black;
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        flex-shrink: 0;
+        padding: 1px;
+        background: gainsboro; }
+        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(1)::after {
+          content: '';
+          display: block;
+          height: 100%;
+          width: 100%;
+          border-radius: 100%;
+          background: #353535; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(2) {
+        width: 25px;
+        font-weight: bold;
+        text-align: center;
+        flex-shrink: 0;
+        margin-left: 2px; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(4) {
+        opacity: .5;
+        margin-left: 2px; }
+        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(4)::before {
+          content: '('; }
+        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-tools .sheet-pc-tool button span:nth-of-type(4)::after {
+          content: ')'; }
+  .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-proficiencies {
+    grid-area: proficiencies; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-proficiencies .sheet-container-body-header span:first-of-type {
+      width: 65px;
+      margin-right: 5px;
+      flex-shrink: 0;
+      text-align: center; }
+    .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-proficiencies .sheet-pc-proficiency button {
+      border: none;
+      background: none;
+      box-shadow: none;
+      font-size: 11px;
+      display: flex;
+      text-align: left;
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      align-items: stretch; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-proficiencies .sheet-pc-proficiency button span:first-of-type {
+        margin-right: 5px;
+        width: 65px;
+        flex-shrink: 0;
+        font-size: 9px;
+        font-weight: bold;
+        display: flex;
+        text-shadow: none;
+        background: gainsboro;
+        justify-content: center;
+        border-radius: 3px; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-proficiencies .sheet-pc-proficiency button span:last-of-type {
+        white-space: normal;
+        line-height: 13px;
+        padding: 2px 0; }
+      .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attributes .sheet-pc-proficiencies .sheet-pc-proficiency button:hover {
+        background: #e5fffb; }
+
+
+        .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-effects {
+            grid-area: effects;
+            display: flex;
+            flex-direction: column; }
+          .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-effects {
+            flex-grow: 1;
+            font-size: 11px; }
+            .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-effects .sheet-container-body-header span:first-of-type {
+              text-align: center;
+              width: 10px;
+              flex-shrink: 0;
+              margin-right: 5px; }
+            .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-effects .sheet-pc-effect {
+              display: flex;
+              align-items: center; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-effects .sheet-pc-effect .sheet-checkbox-image {
+                height: 10px;
+                width: 10px;
+                margin-right: 5px;
+                flex-shrink: 0;
+                align-self: flex-start;
+                margin-top: 4px; }
+                .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-effects .sheet-pc-effect .sheet-checkbox-image span {
+                  padding: 1px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-pc-effects .sheet-pc-effect > :last-child {
+                line-height: 12px;
+                padding: 3px 0; }
+                .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-grouping-pc-health-conditions {
+                    grid-area: health; }
+          .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            grid-area: effects; }
+            .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details {
+              margin-bottom: 5px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details label {
+                cursor: pointer;
+                margin: 0; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details ul {
+                list-style: none;
+                margin: 0;
+                padding: 0; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details .sheet-pc-exhaustion-dot {
+                background: white;
+                border-radius: 100%;
+                border: 1px solid #272727;
+                display: inline-block;
+                height: 8px;
+                margin-right: 4px;
+                position: relative;
+                width: 8px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li + li {
+                margin-top: 2px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li [type=radio] {
+                display: none; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li span {
+                border-radius: 4px;
+                display: flex;
+                font-size: 11px;
+                line-height: 8px;
+                padding: 2px 3px; }
+                .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li span strong {
+                  margin-right: 3px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details .sheet-radio span:hover {
+                position: relative; }
+                .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details .sheet-radio span:hover::before {
+                  content: '';
+                  height: 100%;
+                  width: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background: #e5fffb;
+                  z-index: -1; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li input[type=radio]:checked + span {
+                position: relative; }
+                .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li input[type=radio]:checked + span::after {
+                  background: #b4cf01;
+                  border-radius: 5px;
+                  bottom: 0;
+                  content: '';
+                  height: 26px;
+                  left: 0;
+                  position: absolute;
+                  width: 100%;
+                  z-index: -1; }
+                .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li input[type=radio]:checked + span .sheet-pc-exhaustion-dot {
+                  background: #8c8c8c; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li:nth-of-type(1) input[type=radio]:checked + span::after {
+                display: none; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li:not(:nth-of-type(1)) input[type=radio]:checked + span {
+                color: white; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li:nth-of-type(2) input[type=radio]:checked + span::after {
+                background: #b4cf01;
+                height: 12px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li:nth-of-type(3) input[type=radio]:checked + span::after {
+                background: #b4cf01;
+                height: 26px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li:nth-of-type(4) input[type=radio]:checked + span::after {
+                background: #cfb401;
+                height: 40px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li:nth-of-type(5) input[type=radio]:checked + span::after {
+                background: #cf7d01;
+                height: 54px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li:nth-of-type(6) input[type=radio]:checked + span::after {
+                background: #cf4601;
+                height: 68px; }
+              .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-effects .sheet-pc-exhaustion-details li:nth-of-type(7) input[type=radio]:checked + span::after {
+                background: #cf0101;
+                height: 82px; }
